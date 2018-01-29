@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta  charset="UTF-8">
+    <title>Login</title>
+    <link href="../static/login.css" rel="stylesheet" type="text/css" />
+    <script>
+        function loginbtn() {
+            form.action = "/login";
+            form.method = "POST"
+            
+            console.log("error: " + form.method);
+            form.commit()
+        }
+
+        function registerbtn() {
+            form.action = "/register";
+            form.method = "POST"
+             
+            console.log("error: " + form.method);
+            form.commit()
+        }
+    </script>
+</head>
+
+<body>
+<div id="login">
+        <h1>login</h1>
+        <form method="POST" name="form">
+            <input type="text" required="required" placeholder="用户名" name="username"></input>
+
+            <input type="password" required="required" placeholder="密码" name="password"></input>
+
+            <button class="but" type="sumbit" name="login" onclick="loginbtn()">登录</button>
+            <button class="but" type="sumbit" name="register" onclick="registerbtn()">注册</button>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
